@@ -40,7 +40,7 @@ class Action {
 	}
   
 	fade() {
-		var e = that.getElementById("container");
+		var e = this.gameContext.container;
 		e.className == "fadeout" ? e.className = "fadein" : e.className = "fadeout";
 	}
 	
