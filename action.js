@@ -42,7 +42,7 @@ class Action {
 	fade() {
 		var e = this.gameContext.container;
 		e.className = "fadeout";
-		e.innerHTML = this.gameContext.stories[this.storyCounter].title;
+		e.innerHTML = "<h1>"+this.gameContext.stories[this.storyCounter].title+"</h1>";
 		e.className = "fadein";
 		//e.className == "fadeout" ? e.className = "fadein" : e.className = "fadeout";
 	}
