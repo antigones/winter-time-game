@@ -1,4 +1,5 @@
 window.onload = () => {
+	this.container = document.getElementById('container')
 	this.action = new Action(this);
 	console.log('getStories');
 	fetch("https://jsonplaceholder.typicode.com/posts").then(function(response) {
