@@ -42,8 +42,15 @@ class Action {
 	fade() {
 		var e = this.gameContext.container;
 		e.className = "fadeout";
-		e.innerHTML = "<h1>"+this.gameContext.stories[this.storyCounter].title+"</h1>";
-		e.className = "fadein";
+		function sleep (time) {
+		  return new Promise((resolve) => setTimeout(resolve, time));
+		}
+		sleep(500).then(() => {
+			e.innerHTML = "<h1>"+this.gameContext.stories[this.storyCounter].title+"</h1>";
+			e.className = "fadein";
+		});
+		
+		
 		//e.className == "fadeout" ? e.className = "fadein" : e.className = "fadeout";
 	}
 	
@@ -55,6 +62,16 @@ class Action {
 		
 		this.fade();
 		this.storyCounter++;
+	}
+	
+	previousStory() {
+		var e = this.gameContext.container;
+		if (this.storyCounter < 0 ) {
+			this.storyCounter = this.gameContext.stories.count;	
+		}
+		
+		this.fade();
+		this.storyCounter--;
 	}
 	
   
