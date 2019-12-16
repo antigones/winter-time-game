@@ -45,7 +45,7 @@ class Action {
 	}
 	
 	nextStory() {
-		var e = this.getElementById("container");
+		var e = this.gameContext.getElementById("container");
 		if (this.storyCounter >= this.stories.count) {
 			this.storyCounter = 0;	
 		}
