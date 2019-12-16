@@ -2,7 +2,7 @@ window.onload = () => {
 	this.container = document.getElementById('container')
 	this.action = new Action(this);
 	console.log('getStories');
-	fetch("https://jsonplaceholder.typicode.com/posts").then(function(response) {
+	fetch("https://raw.githubusercontent.com/antigones/winter-time-game/master/stories.json").then(function(response) {
 		response.json().then(function(data) {
         console.log(data);
 		this.stories = data;
