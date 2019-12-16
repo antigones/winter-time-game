@@ -46,12 +46,12 @@ class Action {
 	
 	nextStory() {
 		var e = that.getElementById("container");
-		if (that.storyCounter >= that.stories.count) {
-			that.storyCounter = 0;	
+		if (this.storyCounter >= this.stories.count) {
+			this.storyCounter = 0;	
 		}
-		e.innerHTML = that.stories[that.storyCounter].title;
-		that.fade();
-		that.storyCounter++;
+		e.innerHTML = this.stories[this.storyCounter].title;
+		this.fade();
+		this.storyCounter++;
 	}
 	
   
