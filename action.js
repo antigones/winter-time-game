@@ -41,7 +41,10 @@ class Action {
   
 	fade() {
 		var e = this.gameContext.container;
-		e.className == "fadeout" ? e.className = "fadein" : e.className = "fadeout";
+		e.className = "fadeout";
+		e.innerHTML = this.gameContext.stories[this.storyCounter].title;
+		e.className = "fadein";
+		//e.className == "fadeout" ? e.className = "fadein" : e.className = "fadeout";
 	}
 	
 	nextStory() {
@@ -49,7 +52,7 @@ class Action {
 		if (this.storyCounter >= this.gameContext.stories.count) {
 			this.storyCounter = 0;	
 		}
-		e.innerHTML = this.gameContext.stories[this.storyCounter].title;
+		
 		this.fade();
 		this.storyCounter++;
 	}
