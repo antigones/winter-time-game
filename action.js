@@ -46,10 +46,10 @@ class Action {
 	
 	nextStory() {
 		var e = this.gameContext.container;
-		if (this.storyCounter >= this.stories.count) {
+		if (this.storyCounter >= this.gameContext.stories.count) {
 			this.storyCounter = 0;	
 		}
-		e.innerHTML = this.stories[this.storyCounter].title;
+		e.innerHTML = this.gameContext.stories[this.storyCounter].title;
 		this.fade();
 		this.storyCounter++;
 	}
