@@ -4,7 +4,7 @@ class Action {
 		this.canvas = window.interactiveCanvas;
 		const that = this;
 		this.gameContext = gameContext;
-		this.storyCounter = 0;
+		this.storyCounter = -1;
 		this.commands = {
 			PLAY: function() {
 				that.nextStory();
@@ -49,29 +49,24 @@ class Action {
 			e.innerHTML = "<h1>"+this.gameContext.stories[this.storyCounter].title+"</h1>";
 			e.className = "fadein";
 		});
-		
-		
-		//e.className == "fadeout" ? e.className = "fadein" : e.className = "fadeout";
 	}
 	
 	nextStory() {
-		var e = this.gameContext.container;
-		if (this.storyCounter >= this.gameContext.stories.count) {
-			this.storyCounter = 0;	
-		}
-		
+		var e = this.gameContext.container;		
 		this.fade();
 		this.storyCounter++;
+		if (this.storyCounter > this.gameContext.stories.length - 1) {
+			this.storyCounter = 0;	
+		}
 	}
 	
 	previousStory() {
 		var e = this.gameContext.container;
-		if (this.storyCounter < 0 ) {
-			this.storyCounter = this.gameContext.stories.count;	
-		}
-		
 		this.fade();
 		this.storyCounter--;
+		if (this.storyCounter <   0 ) {
+			this.storyCounter = this.gameContext.stories.length;	
+		}
 	}
 	
   
