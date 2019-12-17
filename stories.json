@@ -6,7 +6,7 @@
   },
   {
     "id": 2,
-    "title": "The Rockefeller Christmas was once small",
+    "title": "The Rockefeller Christmas tree was once small",
     "body": ""
   },
   {
@@ -23,5 +23,15 @@
     "id": 5,
     "title": "Santa Claus has different names around the world",
     "body": ""
-  }  
+  },
+  {
+    "id": 6,
+    "title": "It is estimated that the single “White Christmas” by Irving Berlin is the best-selling single of all time",
+    "body": ""
+  },
+  {
+    "id": 7,
+    "title": "Santa Claus has an address North Pole, H0H 0H0, Canada and you can send him a postcard",
+    "body": ""
+  }   
  ]
