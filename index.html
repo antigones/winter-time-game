@@ -18,11 +18,8 @@
   	<style type="text/css">
 		body {
 			background-color: #C7E3FF;
-	
 			font-family: 'Cabin', cursive;
 			margin: 0px;
-			
-			
 		}
 		
 		body::after {
@@ -91,8 +88,25 @@
 	</style>
 	<script>
 		function nextStory() {
-			this.action.commands.PLAY();
+			this.action.commands.NEXT();
 		}
+		
+		function previousStory() {
+			this.action.commands.PREVIOUS();
+		}
+		
+		document.addEventListener("keydown", function onPress(event) {
+			if (event.keyCode  == '37') {
+				// Do something awesome
+				previousStory();
+			}
+			else if (event.keyCode == '39') {
+			   // right arrow
+			   nextStory();
+			}
+		});
+		
+		
 	</script>
 </head>
 
